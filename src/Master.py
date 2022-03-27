@@ -1,4 +1,3 @@
-
 class Master:
 
   def __init__(self, map_workers, reduce_workers, input_files, output_file):
@@ -24,6 +23,15 @@ class Master:
     for worker in self.map_workers:
       worker.execute()
 
+    # Wait for all map workers to complete execution
+    # ...
+
     # Reduce
     for worker in self.reduce_workers:
       worker.execute()
+
+    # Wait for all reduce workers to complet execution
+    # ...
+
+    # Get results from output.txt
+    # ...
