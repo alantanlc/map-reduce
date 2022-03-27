@@ -1,9 +1,10 @@
-from abc import ABC
+from abc import ABC, abstractmethod
+import AbstractWorker
 
-class AbstractMapWorker(ABC):
+class AbstractMapWorker(AbstractWorker):
 
   def __init__(self):
-   self.input_filename = None
+    self.input_filename = None
     self.intermediate_filename = None
 
   def execute(self):

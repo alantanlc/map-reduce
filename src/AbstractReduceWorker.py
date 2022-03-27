@@ -1,6 +1,6 @@
-from abc import ABC
+from abc import ABC, abstractmethod
 
-def AbstractReduceWorker(ABC):
+def AbstractReduceWorker(AbstractWorker):
 
   def __init__(self):
     self.output_file = None
