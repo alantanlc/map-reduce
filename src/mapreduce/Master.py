@@ -23,13 +23,13 @@ class Master:
     for worker, key in zip(self.reduce_workers, self.keys):
       worker.assign(self.storage_dir, self.intermediate_files, self.output_file, key)
 
-  def clear_output(self):
+  def reset(self):
     with open(os.path.join(self.storage_dir, 'output', self.output_file), 'w') as f:
       pass
 
   def run(self):
     # Clear output file
-    self.clear_output()
+    self.reset()
 
     # Map
     for worker in self.map_workers:

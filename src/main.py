@@ -18,4 +18,3 @@ if __name__ == '__main__':
   master.assign_map_workers()
   master.assign_reduce_workers()
   master.run()
-
