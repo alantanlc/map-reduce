@@ -22,7 +22,7 @@ def AbstractReduceWorker(AbstractWorker):
     return [os.path.join(self.storage_dir, self.intermediate_dir, f) for f in self.intermediate_filenames]
 
   def get_output_filename(self):
-    return os.path.join(self.storage_dir, self.output_dir, self.output_filename))
+    return os.path.join(self.storage_dir, self.output_dir, self.output_filename)
 
   def execute(self):
     self.reset_result()
@@ -38,5 +38,5 @@ def AbstractReduceWorker(AbstractWorker):
 
   def emit(self):
     # Write result to file
-    with open(self.get_output_filename, 'w') as f:
+    with open(self.get_output_filename(), 'w') as f:
       f.write(f'{self.key},{self.result}')
