@@ -1,2 +1,2 @@
-a,1
-b,1
+apple,1
+banana,1
