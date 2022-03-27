@@ -1,4 +1,4 @@
-import AbstractMapWorker
+from ..AbstractMapWorker import AbstractMapWorker
 
 class WordCountMapWorker(AbstractMapWorker):
 
@@ -7,10 +7,7 @@ class WordCountMapWorker(AbstractMapWorker):
     with open(self.get_input_filename(), 'r') as f:
       for line in f:
         for word in line:
-          if word in result:
+          if word in self.result:
             self.result[word] += 1
           else:
             self.result[word] = 1
-
-if __name__ == '__main__':
-  pass

@@ -2,7 +2,7 @@ from abc import ABC, abstractmethod
 import AbstractWorker
 import os
 
-def AbstractReduceWorker(AbstractWorker):
+class AbstractReduceWorker(AbstractWorker):
 
   def __init__(self):
     self.intermediate_dir = 'intermediate'

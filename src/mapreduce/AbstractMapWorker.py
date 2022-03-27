@@ -1,5 +1,5 @@
-from abc import ABC, abstractmethod
-import AbstractWorker
+from abc import abstractmethod
+from mapreduce.AbstractWorker import AbstractWorker
 import os
 
 class AbstractMapWorker(AbstractWorker):

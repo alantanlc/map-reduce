@@ -1,8 +1,8 @@
 class Master:
 
   def __init__(self, map_workers, reduce_workers, input_files, output_file):
-    self.map_workers = workers
-    self.reduce_workers = worker
+    self.map_workers = map_workers
+    self.reduce_workers = reduce_workers
     self.input_files = input_files
     self.output_file = output_file
     self.assign_map(self.map_workers, self.input_files)
