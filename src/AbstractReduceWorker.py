@@ -19,7 +19,7 @@ def AbstractReduceWorker(AbstractWorker):
     self.key = key # a
 
   def get_intermediate_filenames(self):
-    return [os.path.join(self.storage_dir, self.intermediate_dir, f) for f in self.intermediate_filenames]
+    return [os.path.join(self.storage_dir, self.intermediate_dir, f) for f in self.intermediate_filenames()]
 
   def get_output_filename(self):
     return os.path.join(self.storage_dir, self.output_dir, self.output_filename)
