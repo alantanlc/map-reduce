@@ -1,4 +1,4 @@
-# MapReduce
+# Map Reduce
 
 ## Components
 
@@ -21,23 +21,21 @@ Functions:
   1. e.g. each MapWorker takes an input file
 1. assignReduce function
   1. e.g. each ReduceWorker takes an intermediate file
-  1. question - how to know the number of intermediate files?
 1. run function
-  1. for each worker, execute and emit
+  1. for each worker, execute
 
 ### AbstractWorker
 
-Variables:
-1. filename
-
 Functions:
-1. constructor
-  1. initializes filename
 1. abstract execute function
 1. abstract read function (read)
 1. abstract emit function (write)
 
 ### AbstractMapWorker
+
+Variables:
+1. input_filename
+1. intermediate_filename
 
 Functions:
 1. implements execute function which calls abstract map function
@@ -51,9 +49,12 @@ Functions:
   1. split content into words
   1. generate word-count map
 1. implements emit function
-  1. writes results to file
+  1. writes results to intermediate
 
 ### AbstractReduceWorker
+
+Variables:
+1. output_filename
 
 Functions:
 1. implements execute function which calls reduce function
