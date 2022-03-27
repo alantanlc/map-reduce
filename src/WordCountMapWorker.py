@@ -12,3 +12,5 @@ class WordCountMapWorker(AbstractMapWorker):
           else:
             self.result[word] = 1
 
+if __name__ == '__main__':
+  pass

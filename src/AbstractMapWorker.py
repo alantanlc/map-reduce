@@ -40,3 +40,4 @@ class AbstractMapWorker(AbstractWorker):
     with open(self.get_intermediate_filename(), 'w') as f:
       for key, value in self.result.items():
         f.write(f'{key},{value}')
+
