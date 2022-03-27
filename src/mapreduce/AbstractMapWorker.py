@@ -24,11 +24,11 @@ class AbstractMapWorker(AbstractWorker):
 
   # Overridden method
   def execute(self):
-    self.reset_result()
+    self.reset()
     self.map()
     self.emit()
 
-  def reset_result(self):
+  def reset(self):
     self.result = {}
 
   @abstractmethod

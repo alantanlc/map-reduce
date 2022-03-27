@@ -16,7 +16,7 @@ class AbstractReduceWorker(AbstractWorker):
     self.storage_dir = storage_dir # ../storage
     self.intermediate_filenames = intermediate_filenames # [intermediate-1.txt, intermediate-2.txt, ...]
     self.output_filename = output_filename # output.txt
-    self.key = key # a
+    self.key = key # apple
 
   def get_intermediate_filenames(self):
     return [os.path.join(self.storage_dir, self.intermediate_dir, f) for f in self.intermediate_filenames]
@@ -25,11 +25,11 @@ class AbstractReduceWorker(AbstractWorker):
     return os.path.join(self.storage_dir, self.output_dir, self.output_filename)
 
   def execute(self):
-    self.reset_result()
+    self.reset()
     self.reduce()
     self.emit()
 
-  def reset_result(self):
+  def reset(self):
     self.result = 0
 
   @abstractmethod
