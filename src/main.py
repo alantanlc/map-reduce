@@ -1,6 +1,7 @@
+from mapreduce.MasterWorker import MasterWorker
 from mapreduce.wordcount.WordCountMapWorker import WordCountMapWorker
 from mapreduce.wordcount.WordCountReduceWorker import WordCountReduceWorker
-from mapreduce.Master import Master
+from mapreduce.MasterWorker import MasterWorker
 
 if __name__ == '__main__':
   # Init parameters
@@ -14,7 +15,7 @@ if __name__ == '__main__':
   reduce_workers = [WordCountReduceWorker() for i in range(len(keys))]
 
   # Master worker
-  master = Master(map_workers, reduce_workers, storage_dir, input_filenames, intermediate_filenames, output_filename, keys)
+  master = MasterWorker(map_workers, reduce_workers, storage_dir, input_filenames, intermediate_filenames, output_filename, keys)
   master.assign_map_workers()
   master.assign_reduce_workers()
-  master.run()
+  master.execute()

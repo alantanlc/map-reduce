@@ -1,6 +1,7 @@
+from mapreduce.AbstractWorker import AbstractWorker
 import os
 
-class Master:
+class MasterWorker(AbstractWorker):
 
   def __init__(self, map_workers, reduce_workers, storage_dir, input_files, intermediate_files, output_file, keys):
     self.map_workers = map_workers
@@ -27,7 +28,7 @@ class Master:
     with open(os.path.join(self.storage_dir, 'output', self.output_file), 'w') as f:
       pass
 
-  def run(self):
+  def execute(self):
     # Clear output file
     self.reset()
 
