@@ -1,5 +1,6 @@
 from abc import ABC, abstractmethod
 import AbstractWorker
+import os
 
 class AbstractMapWorker(AbstractWorker):
 
