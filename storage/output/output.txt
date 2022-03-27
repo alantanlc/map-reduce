@@ -1,5 +1,6 @@
-apple,2
+apple,4
 banana,2
-cranberry,2
+cranberry,3
+durian,1
 elderberry,1
 fig,2
